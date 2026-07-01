@@ -16,7 +16,7 @@
       "dest": "/404.html"
     },
     {
-      "src": "/(.*)\\.txt",
+      "src": "/(?!txt/)(.*)\\.txt",
       "status": 404,
       "dest": "/404.html"
     }
