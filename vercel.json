@@ -1,22 +1,28 @@
 {
+  "builds": [
+    {
+      "src": "src/**",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
-      "destination": "/pages/index.html"
+      "destination": "/src/pages/index.html"
     },
     {
       "source": "/:page",
-      "destination": "/pages/:page.html"
+      "destination": "/src/pages/:page.html"
     }
   ],
   "routes": [
     {
-      "src": "/data/(.*)",
+      "src": "/src/data/(.*)",
       "status": 404,
       "dest": "/404.html"
     },
     {
-      "src": "/(?!txt/)(.*)\\.txt",
+      "src": "/(.*)\\.txt",
       "status": 404,
       "dest": "/404.html"
     }
